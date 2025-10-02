@@ -1,0 +1,35 @@
+/* conteneur relatif pour ancrer le bouton */
+#chat-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+/* espace à droite dans la zone de saisie pour ne pas chevaucher l'icône */
+#chat-wrap textarea, #chat-wrap input {
+  padding-right: 46px !important;
+}
+
+/* bouton icône placé à l'intérieur, à droite */
+#send-btn {
+  position: relative;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;          /* <-- bouton prend toute la hauteur dispo */
+  margin: auto 0;     /* <-- centré verticalement */
+}
+
+/* style du vrai <button> généré par Gradio */
+#send-btn > button {
+  min-width: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
