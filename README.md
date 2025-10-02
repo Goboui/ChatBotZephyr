@@ -80,3 +80,9 @@ http://127.0.0.1:7860
 - Pour améliorer :
     - réduire max_new_tokens (20 au lieu de 60)
     - utiliser un modèle plus petit (Zephyr 3B)
+
+---
+
+## 📝 Exemple
+ 
+<img width="1751" height="895" alt="image" src="https://github.com/user-attachments/assets/a22d20ce-cd13-4095-b3f0-db8c2308ed1a" />
