@@ -17,7 +17,7 @@ model = AutoModelForCausalLM.from_pretrained(
 # Historique de la conversation avec une instruction stricte
 history = (
     "<|system|>\n"
-    "Tu es un assistant francophone concis. Réponds uniquement à la question de l'utilisateur, avec une seule phrase claire. "
+    "Tu es un assistant francophone concis. Réponds uniquement à la question de l'utilisateur, avec une seule phrase claire."
     "N'ajoute pas de suggestions, d'exemples, d'explications ou de questions supplémentaires. "
     "Ne répète pas la question, ne propose pas d'autres informations.\n"
 )
