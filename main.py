@@ -1,4 +1,5 @@
 import gradio as gr
+from pygments.styles.dracula import background
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import re
@@ -66,7 +67,7 @@ def clear_chat():
 
 with gr.Blocks(css="style.css") as demo:
     gr.Markdown("## 🤖 Chatbot (Zephyr)")
-    chatbot = gr.Chatbot(type="messages")
+    chatbot = gr.Chatbot(type="messages", height=600)
 
     msg = gr.Textbox(
         label="",
@@ -75,7 +76,7 @@ with gr.Blocks(css="style.css") as demo:
         max_lines=4
     )
 
-    send_btn = gr.Button("✈️ Envoyer")   # ou juste ✈️ si tu veux minimal
+    send_btn = gr.Button("✈️ Envoyer")
     clear = gr.Button("🧹 Réinitialiser la conversation")
 
     msg.submit(user_message, [msg, chatbot], [msg, chatbot]) \
