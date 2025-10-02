@@ -1,5 +1,4 @@
 import gradio as gr
-from pygments.styles.dracula import background
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import re
