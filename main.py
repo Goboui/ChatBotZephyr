@@ -68,7 +68,6 @@ with gr.Blocks(css="style.css") as demo:
     gr.Markdown("## 🤖 Chatbot (Zephyr)")
     chatbot = gr.Chatbot(type="messages")
 
-    # Seulement la Textbox dans la zone de saisie
     msg = gr.Textbox(
         label="",
         placeholder="Écris ton message…",
@@ -76,19 +75,15 @@ with gr.Blocks(css="style.css") as demo:
         max_lines=4
     )
 
-    # Bouton envoyer sur sa propre ligne (comme reset)
     send_btn = gr.Button("✈️ Envoyer")   # ou juste ✈️ si tu veux minimal
     clear = gr.Button("🧹 Réinitialiser la conversation")
 
-    # Entrée clavier
     msg.submit(user_message, [msg, chatbot], [msg, chatbot]) \
        .then(bot_message, chatbot, chatbot)
 
-    # Clic bouton envoyer
     send_btn.click(user_message, [msg, chatbot], [msg, chatbot]) \
             .then(bot_message, chatbot, chatbot)
 
-    # Clic bouton reset
     clear.click(clear_chat, None, [msg, chatbot])
 
 demo.launch()
